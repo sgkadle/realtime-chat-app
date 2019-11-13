@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Engine</title>
+  <link rel="stylesheet" type="text/css" href="/static/chat.css">
+  <script src="/socketio"></script>
+  <script src="/static/chat.js" defer></script>
+</head>
+
+<body>
+  <!-- The Modal : Collect user details -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <input type="text" name="name" placeholder="eg. John Doe" class='padding-small' id='name'>
+      <input type="email" name="email" placeholder="john.doe@xyz.com" class='padding-small' id='email'>
+      <button class='padding-small' id='submitUserDetails'>Submit</button>
+    </div>
+  </div>
+
+  <!-- Chat container -->
+  <div id='chat-container'>
+    <!-- Show active user list -->
+    <div id='chat-container-left' class='theme-dark padding-medium flex-column'>
+      <h4>Active Users</h4>
+      <ul id="users"></ul>
+    </div>
+    <!-- Splash Screen for when no user chat is selected. -->
+    <div id='chat-container-center' class='theme-light padding-medium'>
+      <h4>Please select a user from the "Active User" list to start a conversation.<h4>
+    </div>
+    <!-- User chats along with input box to enter messages. -->
+    <div id='chat-container-right' class='theme-light flex-column'>
+      <div class="padding-medium">
+        <h4 id="conversation-header">Current Conversation</h4>
+        <ul id="chat-messages"></ul>
+      </div>
+      <form action="" id="chat-form">
+        <input id="chat-message-input" autocomplete="off" /><button>Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

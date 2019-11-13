@@ -1,0 +1,154 @@
+*{
+  padding: 0em;
+  margin: 0em;
+}
+
+.theme-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.theme-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.padding-small {
+  padding: 0.5em;
+}
+
+.padding-medium {
+  padding: 1em;
+}
+
+.padding-large {
+  padding: 1.5em;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-container{
+  display: flex;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+#chat-container-left{
+  width: 40%;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+#chat-container-right{
+  overflow-y: scroll;
+  display: none;
+  width: 100%;
+}
+
+#chat-container-center{
+  margin-top: 2em;
+  width: 100%;
+}
+
+#chat-container-center > h4 {
+  text-align: center;
+}
+
+
+/* Modal Taken from : W3Schools https://www.w3schools.com/howto/howto_css_modals.asp */
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content > * {
+  margin-top: 0.5em;
+}
+
+.modal-content > button {
+  background-color: rgb(107, 217, 107);
+  font-weight: 800;
+}
+form {
+  background: #000;
+  padding: 3px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+form input {
+  border: 0;
+  padding: 10px;
+  width: 20em;
+  margin-right: .5%;
+  border-radius: 5px;
+}
+form button {
+  width: 9%;
+  background: #befff1;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user{
+  padding: 0.2em;
+  margin-top: 1em;
+  color: #33dede;
+  cursor: pointer;
+}
+
+#users{
+  list-style-type: none;
+}
+
+#chat-messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#chat-messages li {
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+/*#chat-messages li:nth-child(odd) {
+  background: #eee;
+}*/
+
+.from-message{
+  background-color: #ffd9a7;
+  color: #000;
+}
+
+.to-message{
+  background-color: #1798f1;
+  color: #fff;
+}
